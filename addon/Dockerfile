@@ -27,4 +27,4 @@ RUN chmod +x /etc/services.d/server/run
 EXPOSE 8000
 
 # Default command for local runs (HA builder overrides entrypoint/init)
-CMD ["/etc/services.d/server/run"]
+CMD ["/usr/local/bin/tflite-server"]
