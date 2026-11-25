@@ -26,5 +26,13 @@ RUN chmod +x /etc/services.d/server/run
 
 EXPOSE 8000
 
+ENV PORT=8000 \
+    MODEL_DIR=/config/models \
+    STATIC_DIR=/opt/app/static
+
+RUN mkdir -p /config/models && chmod 0775 /config/models
+
+CMD ["/usr/local/bin/tflite-server"]
+
 # Default command for local runs (HA builder overrides entrypoint/init)
 CMD ["/usr/local/bin/tflite-server"]
