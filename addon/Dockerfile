@@ -32,7 +32,5 @@ ENV PORT=8000 \
 
 RUN mkdir -p /config/models && chmod 0775 /config/models
 
-CMD ["/usr/local/bin/tflite-server"]
-
 # Default command for local runs (HA builder overrides entrypoint/init)
 CMD ["/usr/local/bin/tflite-server"]
