@@ -1,7 +1,12 @@
 {
   "name": "TFLite Server",
   "slug": "tflite_server",
-  "version": "0.5.0",
+  "version": "0.5.1",
+  "environment": {
+    "PORT": "8000",
+    "MODEL_DIR": "/config/models",
+    "STATIC_DIR": "/opt/app/static"
+    },
   "description": "A Rust web server for TFLite model inference",
   "url": "https://github.com/ificator/hass-tflite",
   "startup": "services",
